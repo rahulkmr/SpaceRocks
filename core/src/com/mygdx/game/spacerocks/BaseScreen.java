@@ -1,4 +1,4 @@
-package com.mygdx.game.starfish;
+package com.mygdx.game.spacerocks;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
