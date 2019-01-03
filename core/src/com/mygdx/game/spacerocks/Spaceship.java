@@ -2,6 +2,7 @@ package com.mygdx.game.spacerocks;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 public class Spaceship extends BaseActor {
@@ -55,5 +56,16 @@ public class Spaceship extends BaseActor {
         wrapAroundWorld();
 
 
+    }
+
+    public void warp() {
+        if (getStage() == null)
+            return;
+
+        Warp warp1 = new Warp(0, 0, this.getStage());
+        warp1.centerAtActor(this);
+        setPosition(MathUtils.random(800), MathUtils.random(600));
+        Warp warp2 = new Warp(0, 0, this.getStage());
+        warp2.centerAtActor(this);
     }
 }
