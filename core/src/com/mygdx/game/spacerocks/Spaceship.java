@@ -8,7 +8,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 public class Spaceship extends BaseActor {
     private Thrusters thrusters;
     private Shield shield;
-    private int shieldPower;
+    public int shieldPower;
 
     public Spaceship(float x, float y, Stage s) {
         super(x, y, s);
