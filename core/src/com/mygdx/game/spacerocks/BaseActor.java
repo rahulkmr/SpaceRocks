@@ -317,4 +317,15 @@ public class BaseActor extends Actor {
                 worldBounds.height - cam.viewportHeight / 2);
         cam.update();
     }
+
+    public void wrapAroundWorld() {
+        if (getX() + getWidth() < 0)
+            setX(worldBounds.width);
+        if (getX() > worldBounds.width)
+            setX(-getWidth());
+        if (getY() + getHeight() < 0)
+            setY(worldBounds.height);
+        if (getY() > worldBounds.height)
+            setY(-getHeight());
+    }
 }
